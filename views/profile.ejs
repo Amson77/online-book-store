@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Online Book Store</title>
+</head>
+<body>
+    <!-- Include Header -->
+    <%- include('components/header', { user: user }) %>
+
+
+    <div class="content">
+        <h1>User Profile</h1>
+        <p>Name: <%= user.name %></p>
+        <p>Email: <%= user.email %></p>
+        <!-- Add any other profile-specific content -->
+    </div>
+
+
+    <!-- Include Footer -->
+    <%- include('components/footer') %>
+</body>
+</html>
