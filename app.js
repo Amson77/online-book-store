@@ -46,10 +46,13 @@ app.use('/components', express.static(path.join(__dirname, 'views/components')))
 
 
 // routes
+const bookRoutes = require("./routes/bookRoutes");
 app.use('/', indexRoutes);
 app.use('/auth', authRoutes);
 app.use('/', homeRoutes);
 app.use('/', profileRoutes);
+app.use("/", bookRoutes);
+
 
 
 //for db connection

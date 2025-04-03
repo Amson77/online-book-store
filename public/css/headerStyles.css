@@ -1,0 +1,62 @@
+/* General Reset */
+body, h1, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 15px 20px;
+    color: white;
+}
+
+
+.navbar .logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+
+.nav-links a:hover {
+    color: #f4a261;
+}
+
+
+/* Footer Styling */
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

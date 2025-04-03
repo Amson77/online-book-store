@@ -1,6 +1,31 @@
-<form action="/auth/signup" method="POST">
-    <input type="text" name="name" placeholder="Full Name" required><input type="email" name="email" placeholder="Email" required>
-    <input type="password" name="password" placeholder="Password"
-    required>
-    <button type="submit">Signup</button>
-    </form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup | Online Book Store</title>
+    <link rel="stylesheet" href="/css/headerStyles.css"> <!-- Header & Footer Styles -->
+    <link rel="stylesheet" href="/css/signupStyles.css"> <!-- Signup Form Styles -->
+</head>
+<body>
+
+
+    <%- include('partials/header') %>
+
+
+    <main class="signup-container">
+        <h2>Create an Account</h2>
+        <form action="/auth/signup" method="POST" class="signup-form">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Signup</button>
+        </form>
+    </main>
+
+
+    <%- include('partials/footer') %>
+
+
+</body>
+</html>

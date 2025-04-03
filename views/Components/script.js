@@ -1,14 +1,17 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     console.log("JavaScript Loaded!");
 
 
-    // Smooth scrolling for navigation
+    // Smooth scrolling for internal navigation links only
     document.querySelectorAll("nav ul li a").forEach(anchor => {
-        anchor.addEventListener("click", function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute("href"));
-            if (target) {
-                target.scrollIntoView({ behavior: "smooth" });
+        anchor.addEventListener("click", function (e) {
+            // Check if the link is an anchor to a section within the same page
+            if (this.getAttribute("href").startsWith("#")) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute("href"));
+                if (target) {
+                    target.scrollIntoView({ behavior: "smooth" });
+                }
             }
         });
     });
@@ -23,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("nav").prepend(menuToggle);
 
 
-    menuToggle.addEventListener("click", function() {
+    menuToggle.addEventListener("click", function () {
         const navList = document.querySelector("nav ul");
         navList.style.display = navList.style.display === "block" ? "none" : "block";
     });
@@ -44,5 +47,3 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("resize", checkScreenSize);
     checkScreenSize();
 });
-
-

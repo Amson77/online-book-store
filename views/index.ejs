@@ -5,17 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/headerStyles.css">
 </head>
 <body>
-    <header>
+
+
+    <%- include('partials/header') %>
+
+
+    <!-- <main>
         <h1>Welcome to the Online Book Store</h1>
-    </header>
-    <main>
         <div class="auth-buttons">
             <a href="/auth/signup" class="btn">Signup</a>
             <a href="/auth/login" class="btn">Login</a>
         </div>
-    </main>
+    </main> -->
+
+
+    <%- include('partials/footer') %>
+
+
     <script src="/js/script.js"></script>
 </body>
 </html>
