@@ -9,6 +9,7 @@ const indexRoutes = require('./routes/index');
 const authRoutes = require('./routes/authRoutes');
 const homeRoutes = require('./routes/homeRoutes');
 const profileRoutes = require('./routes/profileRoutes');
+const adminRoutes = require('./routes/adminRoutes');
 
 
 //load environment variables
@@ -52,7 +53,7 @@ app.use('/auth', authRoutes);
 app.use('/', homeRoutes);
 app.use('/', profileRoutes);
 app.use("/", bookRoutes);
-
+app.use('/', adminRoutes);
 
 
 //for db connection

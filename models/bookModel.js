@@ -1,4 +1,5 @@
-const db = require("../models/bookModels");
+const db = require("../config/db");
+
 // Create Book table (if it doesn’t exist)
 const createBookTable = async () => {
   const query = `
@@ -20,3 +21,5 @@ const createBookTable = async () => {
 
 // Ensure the table is created when the server starts
 createBookTable();
+
+module.exports = db;

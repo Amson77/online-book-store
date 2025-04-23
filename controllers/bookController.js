@@ -1,6 +1,4 @@
 const db = require("../models/bookModel");
-
-
 // Get all books from the database
 const getBooks = async (req, res) => {
   try {
@@ -16,8 +14,6 @@ const getBooks = async (req, res) => {
       res.status(500).send("Internal Server Error");
   }
 };
-
-
 module.exports = { getBooks };
 
 
